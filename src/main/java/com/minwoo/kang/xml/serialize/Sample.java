@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * Created on 2017. 5. 27..
  */
-class Sample implements Serializable {
+public class Sample implements Serializable {
 
   private static final long serialVersionUID = -8504165710426544560L;
 
@@ -13,7 +13,7 @@ class Sample implements Serializable {
   private String email;
   private String content;
 
-  static Sample of(String name, String email, String content) {
+  public static Sample of(String name, String email, String content) {
     Sample sample = new Sample();
     sample.name = name;
     sample.email = email;

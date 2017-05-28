@@ -1,4 +1,4 @@
-package com.minwoo.kang.xml.serialize;
+package com.minwoo.kang.xml.serialize.jackson;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;

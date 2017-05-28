@@ -1,7 +1,8 @@
-package com.minwoo.kang.xml.serialize;
+package com.minwoo.kang.xml.serialize.jackson;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import com.minwoo.kang.xml.serialize.Sample;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.minwoo.kang.xml.serialize;
+package com.minwoo.kang.xml.serialize.xstream;
 
 import com.thoughtworks.xstream.XStream;
 
