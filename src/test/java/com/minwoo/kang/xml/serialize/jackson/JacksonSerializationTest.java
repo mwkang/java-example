@@ -2,6 +2,7 @@ package com.minwoo.kang.xml.serialize.jackson;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import com.fasterxml.jackson.databind.JsonMappingException;
 import com.minwoo.kang.xml.serialize.Sample;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -60,5 +61,14 @@ public class JacksonSerializationTest {
     String xml2 = JacksonSerialization.toXmlWithRoot(list, "root");
     System.out.println(xml2);
     assertThat(xml2).isNotEmpty();
+  }
+
+  @Test(expected = JsonMappingException.class)
+  public void notSupportCharacters() throws Exception {
+    Map<String, String> map = new HashMap<>();
+    map.put("a", "A\u0001B");
+    map.put("b", "A&lt;B");
+
+    JacksonSerialization.toXml(map);
   }
 }

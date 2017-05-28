@@ -62,4 +62,15 @@ public class CustomJacksonSerializationTest {
     System.out.println(xml2);
     assertThat(xml2).contains("Override Output");
   }
+
+  @Test
+  public void notSupportCharacters() throws Exception {
+    Map<String, String> map = new HashMap<>();
+    map.put("a", "A\u0001B");
+    map.put("b", "A&lt;B");
+
+    String xml = CustomJacksonSerialization.toXml(map);
+    System.out.println(xml);
+    assertThat(xml).contains("Override Output");
+  }
 }
