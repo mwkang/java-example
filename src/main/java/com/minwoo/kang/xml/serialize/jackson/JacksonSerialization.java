@@ -8,7 +8,7 @@ import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 /**
  * Created on 2017. 5. 27..
  */
-public class JacksonSerialization {
+class JacksonSerialization {
 
   private static final ObjectMapper xmlMapper = new XmlMapper()
       .enable(SerializationFeature.INDENT_OUTPUT);
